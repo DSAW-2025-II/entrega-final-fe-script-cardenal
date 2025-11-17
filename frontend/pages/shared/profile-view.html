@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheels - Personal Info</title>
+    <link rel="stylesheet" href="../../css/profile.css">
+</head>
+<body>
+    <div class="profile-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item">Home</div>
+            <div class="sidebar-item active">Personal Info</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="profile-content">
+            <!-- Top Bar with User -->
+            <div class="top-bar">
+                <div class="user-menu">
+                    <span id="userName">Hugo</span>
+                    <div class="user-avatar">H</div>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="logo-header">
+                    <h1 class="logo">WHEELS <span class="car-icon">🚗</span></h1>
+                </div>
+
+                <h2 class="profile-title">Personal Info</h2>
+
+                <!-- Personal Information -->
+                <div class="info-section">
+                    <div class="info-row">
+                        <div class="info-group">
+                            <label>Name</label>
+                            <div class="info-value" id="firstName">Hugo</div>
+                        </div>
+
+                        <div class="info-group">
+                            <label>Last Name</label>
+                            <div class="info-value" id="lastName">Ocallega</div>
+                        </div>
+                    </div>
+
+                    <div class="info-group">
+                        <label>Corporate Email</label>
+                        <div class="info-value" id="email">hugo@gmail.com</div>
+                    </div>
+
+                    <div class="info-group">
+                        <label>University ID</label>
+                        <div class="info-value" id="universityId">0000123456</div>
+                    </div>
+
+                    <div class="info-group">
+                        <label>Phone Number</label>
+                        <div class="info-value" id="phone">+57 3124785471</div>
+                    </div>
+
+                    <div class="info-group">
+                        <label>Set Password</label>
+                        <div class="info-value">••••••••</div>
+                    </div>
+
+                    <div class="info-group">
+                        <label>Role</label>
+                        <div class="role-toggle-view">
+                            <span class="role-badge active" id="driverBadge">Driver</span>
+                            <span class="role-badge" id="riderBadge">Rider</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="driver-upgrade-section" id="driverUpgradeSection" style="display: none;">
+                    <div class="info-message">
+                        <p>🚗 ¿Quieres ofrecer viajes como conductor?</p>
+                        <button class="btn-primary" id="becomeDriverBtn">Registrarme como Conductor</button>
+                    </div>
+                </div>
+
+                <!-- Vehicle Info (solo para conductores) -->
+                <div class="vehicle-section" id="vehicleSection" style="display: none;">
+                    <h3 class="section-subtitle">Vehicle Information</h3>
+                    
+                    <div class="info-row">
+                        <div class="info-group">
+                            <label>License Plate</label>
+                            <div class="info-value" id="licensePlate"></div>
+                        </div>
+
+                        <div class="info-group">
+                            <label>Make</label>
+                            <div class="info-value" id="make"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-group">
+                            <label>Model</label>
+                            <div class="info-value" id="model"></div>
+                        </div>
+
+                        <div class="info-group">
+                            <label>Capacity</label>
+                            <div class="info-value" id="capacity"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn-secondary" id="editProfileBtn">Edit Profile</button>
+                    <button class="btn-vehicle" id="vehicleInfoBtn" style="display: none;">Vehicle Info</button>
+                    <button class="btn-danger" id="logoutBtn">Log out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/profile-view.js"></script>
+</body>
+</html>

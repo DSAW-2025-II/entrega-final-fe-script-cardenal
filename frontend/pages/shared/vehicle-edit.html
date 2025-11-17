@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheels - Edit Vehicle Info</title>
+    <link rel="stylesheet" href="../../css/vehicle-edit.css">
+</head>
+<body>
+    <div class="profile-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item">Home</div>
+            <div class="sidebar-item">Personal Info</div>
+            <div class="sidebar-item">Vehicle Info</div>
+            <div class="sidebar-item active">Edit Vehicle Info</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="profile-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="user-menu">
+                    <span id="userName">Hugo</span>
+                    <div class="user-avatar">H</div>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="logo-header">
+                    <h1 class="logo">WHEELS <span class="car-icon">🚗</span></h1>
+                </div>
+
+                <h2 class="profile-title">Edit Vehicle Info</h2>
+
+                <form id="editVehicleForm" class="edit-form">
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label for="make">Vehicle Make</label>
+                            <input 
+                                type="text" 
+                                id="make" 
+                                class="input-field"
+                                placeholder="CHEVROLET"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="model">Vehicle Model</label>
+                            <input 
+                                type="text" 
+                                id="model" 
+                                class="input-field"
+                                placeholder="CAMARO 2026"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="licensePlate">License Plate Number</label>
+                            <input 
+                                type="text" 
+                                id="licensePlate" 
+                                class="input-field"
+                                placeholder="UNI233"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label>Vehicle Capacity</label>
+                            <div class="capacity-buttons-small">
+                                <button type="button" class="capacity-btn-edit" data-capacity="1">1</button>
+                                <button type="button" class="capacity-btn-edit" data-capacity="2">2</button>
+                                <button type="button" class="capacity-btn-edit" data-capacity="3">3</button>
+                                <button type="button" class="capacity-btn-edit" data-capacity="4">4</button>
+                                <button type="button" class="capacity-btn-edit" data-capacity="5">5</button>
+                            </div>
+                            <input type="hidden" id="capacity" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vehiclePhoto">Upload Vehicle Photo</label>
+                            <input 
+                                type="file" 
+                                id="vehiclePhoto" 
+                                name="vehiclePhoto" 
+                                accept="image/*"
+                                class="input-field file-input"
+                            >
+                            <span class="file-name" id="vehiclePhotoName">No file chosen</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="soatPhoto">Upload SOAT Photo</label>
+                            <input 
+                                type="file" 
+                                id="soatPhoto" 
+                                name="soatPhoto" 
+                                accept="image/*"
+                                class="input-field file-input"
+                            >
+                            <span class="file-name" id="soatPhotoName">No file chosen</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Valid SOAT</label>
+                            <div class="soat-toggle">
+                                <button type="button" class="soat-btn active" id="soatYesBtn" data-soat="yes">
+                                    Yes
+                                </button>
+                                <button type="button" class="soat-btn" id="soatNoBtn" data-soat="no">
+                                    No
+                                </button>
+                            </div>
+                            <input type="hidden" id="soat" value="yes">
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    <div class="action-buttons">
+                        <button type="submit" class="btn-danger">Save Changes</button>
+                    </div>
+                </form>
+
+                <!-- Success/Error Messages -->
+                <div id="successMessage" class="success-box" style="display: none;">
+                    Vehicle info updated successfully!
+                </div>
+                <div id="errorMessage" class="error-box" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/vehicle-edit.js"></script>
+</body>
+</html>

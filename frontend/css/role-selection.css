@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(140deg, 
+        #C1C9C7 0%, 
+        #2E2D32 40%, 
+        #DDDDDD 74%, 
+        #000000 100%
+    );
+    overflow: hidden;
+}
+
+/* Wrapper para React */
+.home-page-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(140deg, 
+        #C1C9C7 0%, 
+        #2E2D32 40%, 
+        #DDDDDD 74%, 
+        #000000 100%
+    );
+    overflow: auto;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+}
+
+.logo-section {
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.car-emoji {
+    font-size: 3rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.role-selection {
+    margin-top: 60px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* ✅ NUEVO: Subtítulo */
+.subtitle {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    font-weight: 300;
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+/* ✅ ACTUALIZADO: Mantiene el mismo diseño que role-buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* ✅ ACTUALIZADO: Mismo tamaño y colores del Figma */
+.btn-primary,
+.btn-secondary {
+    background: linear-gradient(135deg, #000000 0%, #2e2e2e 100%);
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    min-width: 220px;
+    width: 220px;
+    max-width: 220px;
+    flex-shrink: 0;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    opacity: 0.9;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ MANTENIDO: Botones originales (por si se usan en otro lado) */
+.role-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.role-btn {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    min-width: 150px;
+}
+
+.role-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.role-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+    
+    .car-emoji {
+        font-size: 2rem;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 12px 40px;
+        font-size: 1rem;
+        min-width: 180px;
+        width: 180px;
+    }
+
+    .role-btn {
+        padding: 12px 40px;
+        font-size: 1rem;
+        min-width: 130px;
+    }
+    
+    .action-buttons,
+    .role-buttons {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .car-emoji {
+        font-size: 1.8rem;
+    }
+    
+    .tagline {
+        font-size: 0.9rem;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+    
+    .action-buttons,
+    .role-buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 200px;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .role-btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}

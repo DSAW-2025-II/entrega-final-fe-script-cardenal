@@ -1,0 +1,322 @@
+/* profile-rider.css - Vista y edición de perfil del rider */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    height: 100vh;
+    background: linear-gradient(180deg, 
+        #C1C9C7 0%, 
+        #404040 40%, 
+        #000000 74%, 
+        #000000 100%
+    );
+    margin: 0;
+    overflow: hidden;
+}
+
+.profile-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #2d2d2d;
+    overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 180px;
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-item {
+    padding: 15px 30px;
+    color: #888;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sidebar-item:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.sidebar-item.active {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-weight: 600;
+    border-left: 4px solid #ffffff;
+}
+
+/* MAIN CONTENT */
+.profile-content {
+    flex: 1;
+    background: linear-gradient(180deg, 
+        #C1C9C7 0%, 
+        #565559 40%, 
+        #DDDDDD 74%, 
+        #565559 100%
+    );
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.user-menu span {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    flex: 1;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px 40px 40px;
+    width: 100%;
+}
+
+.logo-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    font-size: 2.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.car-icon {
+    font-size: 1.8rem;
+}
+
+.profile-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.section-subtitle {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* INFO SECTION */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.info-group,
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info-group label,
+.info-item label {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.info-value {
+    padding: 14px 16px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.info-item.full-width {
+    grid-column: 1 / -1;
+}
+
+/* ROLE BADGES */
+.role-toggle-view {
+    display: flex;
+    gap: 12px;
+}
+
+.role-badge {
+    padding: 10px 35px;
+    background-color: #ffffff;
+    color: #999;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.role-badge.active {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.role-badge.rider {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+/* ACTION BUTTONS */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary,
+.btn-vehicle,
+.btn-danger,
+.btn-edit,
+.btn-logout {
+    flex: 1;
+    min-width: 150px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary,
+.btn-edit {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-secondary:hover,
+.btn-edit:hover {
+    background-color: #2e2e2e;
+}
+
+.btn-vehicle {
+    background-color: #444;
+    color: #ffffff;
+}
+
+.btn-vehicle:hover {
+    background-color: #333;
+}
+
+.btn-danger,
+.btn-logout {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.btn-danger:hover,
+.btn-logout:hover {
+    background-color: #cc0000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+
+    .profile-card {
+        padding: 20px 30px;
+    }
+
+    .info-row {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-secondary,
+    .btn-vehicle,
+    .btn-danger,
+    .btn-edit,
+    .btn-logout {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-bar {
+        padding: 15px 20px;
+    }
+
+    .profile-card {
+        padding: 15px 20px;
+    }
+
+    .profile-title {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+}

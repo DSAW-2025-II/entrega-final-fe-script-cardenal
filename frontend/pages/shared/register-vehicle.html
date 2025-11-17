@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheels - Vehicle Details</title>
+    <link rel="stylesheet" href="../../css/register-vehicle.css">
+</head>
+<body>
+    <div class="register-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item">Role</div>
+            <div class="sidebar-item">Sign In</div>
+            <div class="sidebar-item">Sign Up</div>
+            <div class="sidebar-item active">Vehicle Details</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="register-content">
+            <div class="register-card">
+                <div class="logo-header">
+                    <h1 class="logo">WHEELS <span class="car-icon">🚗</span></h1>
+                </div>
+
+                <h2 class="register-title">Vehicle Details</h2>
+
+                <!-- Vehicle Form -->
+                <form id="vehicleForm" class="register-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="licensePlate">License Plate Number</label>
+                            <input 
+                                type="text" 
+                                id="licensePlate" 
+                                name="licensePlate" 
+                                placeholder="ABC123"
+                                class="input-field"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="make">Vehicle Make</label>
+                            <input 
+                                type="text" 
+                                id="make" 
+                                name="make" 
+                                placeholder="Toyota"
+                                class="input-field"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vehiclePhoto">Upload Vehicle Photo</label>
+                        <input 
+                            type="file" 
+                            id="vehiclePhoto" 
+                            name="vehiclePhoto" 
+                            accept="image/*"
+                            class="input-field file-input"
+                        >
+                        <span class="file-name" id="vehiclePhotoName">No file chosen</span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="model">Vehicle Model</label>
+                            <input 
+                                type="text" 
+                                id="model" 
+                                name="model" 
+                                placeholder="Corolla 2024"
+                                class="input-field"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label>Vehicle Capacity</label>
+                            <div class="capacity-buttons">
+                                <button type="button" class="capacity-btn" data-capacity="1">1</button>
+                                <button type="button" class="capacity-btn" data-capacity="2">2</button>
+                                <button type="button" class="capacity-btn" data-capacity="3">3</button>
+                                <button type="button" class="capacity-btn" data-capacity="4">4</button>
+                                <button type="button" class="capacity-btn" data-capacity="5">5</button>
+                            </div>
+                            <input type="hidden" id="capacity" name="capacity" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="soatPhoto">Upload SOAT Photo</label>
+                        <input 
+                            type="file" 
+                            id="soatPhoto" 
+                            name="soatPhoto" 
+                            accept="image/*"
+                            class="input-field file-input"
+                        >
+                        <span class="file-name" id="soatPhotoName">No file chosen</span>
+                    </div>
+
+                    <button type="submit" class="btn-next">OK ✓</button>
+                </form>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="error-box" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/register-vehicle.js"></script>
+</body>
+</html>

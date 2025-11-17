@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheels - Driver Log in</title>
+    <link rel="stylesheet" href="../../css/login.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <!-- Left Side: Login Form -->
+        <div class="login-section">
+            <div class="login-content">
+                <h2 class="login-title">Driver Log in to Wheels</h2>
+                
+                <form id="loginForm" class="login-form">
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Email@domain.com"
+                        class="input-field"
+                        required
+                    >
+
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Password"
+                        class="input-field"
+                        required
+                    >
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">Sign in</button>
+
+                    <p class="signup-text">
+                        Don't have an account? <a href="register-basic.html" class="signup-link">Sign up</a>
+                    </p>
+                </form>
+
+                <div id="errorMessage" class="error-box" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- Right Side: Info Card -->
+        <div class="info-section">
+            <div class="info-card">
+                <h1 class="wheels-logo">WHEELS <span class="car-icon">🚗</span></h1>
+                
+                <div class="map-box">
+                    <div class="pin-icon">🚙</div>
+                </div>
+
+                <h3 class="info-title">Drive and Earn</h3>
+                <p class="info-description">
+                    Share your daily commute with campus peers. Fill empty 
+                    seats in your car, save on fuel costs, and help create 
+                    a more sustainable campus community.
+                </p>
+
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/login-driver.js"></script>
+</body>
+</html>

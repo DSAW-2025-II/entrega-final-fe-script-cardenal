@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheels - Sign Up</title>
+    <link rel="stylesheet" href="../../css/register-rider.css">
+</head>
+<body>
+    <div class="register-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item">Role</div>
+            <div class="sidebar-item">Sign In</div>
+            <div class="sidebar-item active">Sign Up</div>
+        </div>
+
+        <div class="register-content">
+            <div class="register-card">
+                <div class="logo-header">
+                    <h1 class="logo">WHEELS <span class="car-icon">🚗</span></h1>
+                </div>
+
+                <h2 class="register-title">Sign up to Wheels</h2>
+
+                <div class="role-toggle">
+                    <button type="button" class="toggle-btn" id="driverToggle" data-role="driver">
+                        Driver
+                    </button>
+                    <button type="button" class="toggle-btn active" id="riderToggle" data-role="rider">
+                        Rider
+                    </button>
+                </div>
+
+                <form id="registerForm" class="register-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Name</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                placeholder="Juan David"
+                                class="input-field"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                placeholder="Rodriguez"
+                                class="input-field"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="universityId">University ID</label>
+                        <input 
+                            type="text" 
+                            id="universityId" 
+                            name="universityId" 
+                            placeholder="0000123456"
+                            class="input-field"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Corporate Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="juanrodriguez@unisabana.edu.co"
+                            class="input-field"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="+57 3001234567"
+                            class="input-field"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="••••••••"
+                            class="input-field"
+                            required
+                            minlength="6"                        
+                        >
+                    </div>
+
+                    <button type="submit" class="btn-next">OK !</button>
+
+                    <p class="signin-text">
+                        Already have an account? 
+                        <a href="login.html" class="signin-link">Sign in</a>
+                    </p>
+                </form>
+
+                <div id="errorMessage" class="error-box" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/register-rider.js"></script>
+</body>
+</html>
