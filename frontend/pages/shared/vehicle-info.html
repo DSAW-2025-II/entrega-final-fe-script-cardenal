@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheels - Vehicle Info</title>
+    <link rel="stylesheet" href="../../css/vehicle-info.css">
+</head>
+<body>
+    <div class="profile-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item">Home</div>
+            <div class="sidebar-item">Personal Info</div>
+            <div class="sidebar-item active">Vehicle Info</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="profile-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="user-menu">
+                    <span id="userName">Hugo</span>
+                    <div class="user-avatar">H</div>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="logo-header">
+                    <h1 class="logo">WHEELS <span class="car-icon">🚗</span></h1>
+                </div>
+
+                <h2 class="profile-title">Vehicle Info</h2>
+
+                <!-- Vehicle Information -->
+                <div class="info-section">
+                    <div class="info-group">
+                        <label>Vehicle Make</label>
+                        <div class="info-value" id="make">TOYOTA</div>
+                    </div>
+
+                    <div class="info-group">
+                        <label>Vehicle Model</label>
+                        <div class="info-value" id="model">PRADO 2026</div>
+                    </div>
+
+                    <div class="info-group">
+                        <label>License Plate Number</label>
+                        <div class="info-value" id="licensePlate">ABC123</div>
+                    </div>
+
+                    <div class="info-group">
+                        <label>Vehicle Capacity</label>
+                        <div class="info-value" id="capacity">5</div>
+                    </div>
+
+                    <div class="info-group">
+                        <label>Valid SOAT</label>
+                        <div class="soat-status">
+                            <span class="status-badge active" id="soatYes">Yes</span>
+                            <span class="status-badge" id="soatNo">No</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn-danger" id="okBtn">OK !</button>
+                    <button class="btn-secondary" id="editVehicleBtn">Edit Vehicle Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/vehicle-info.js"></script>
+</body>
+</html>

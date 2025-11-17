@@ -1,0 +1,50 @@
+/* Estilos globales para React - Asegurar que cada componente tenga su propio contexto de body */
+
+/* Resetear estilos de body cuando se carga React */
+body.react-root {
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper para Home */
+.home-page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(140deg, 
+    #C1C9C7 0%, 
+    #2E2D32 40%, 
+    #DDDDDD 74%, 
+    #000000 100%
+  );
+  overflow: auto;
+}
+
+/* Wrapper para Login */
+.login-page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, 
+    #C1C9C7 0%, 
+    #404040 40%, 
+    #000000 74%, 
+    #000000 100%
+  );
+  padding: 50px;
+  overflow: auto;
+}
+
+/* Wrapper para Dashboard - PERMITE SCROLL */
+.dashboard-page-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+

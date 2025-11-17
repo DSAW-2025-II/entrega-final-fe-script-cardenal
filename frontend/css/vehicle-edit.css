@@ -1,0 +1,413 @@
+/* vehicle-edit.css - Edición de información del vehículo */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    height: 100vh;
+    background: linear-gradient(180deg, 
+        #C1C9C7 0%, 
+        #404040 40%, 
+        #000000 74%, 
+        #000000 100%
+    );
+    margin: 0;
+    overflow: hidden;
+}
+
+.profile-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #2d2d2d;
+    overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 180px;
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-item {
+    padding: 15px 30px;
+    color: #888;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sidebar-item:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.sidebar-item.active {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-weight: 600;
+    border-left: 4px solid #ffffff;
+}
+
+/* MAIN CONTENT */
+.profile-content {
+    flex: 1;
+    background: linear-gradient(180deg, 
+        #C1C9C7 0%, 
+        #565559 40%, 
+        #DDDDDD 74%, 
+        #565559 100%
+    );
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.user-menu span {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    flex: 1;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px 40px 40px;
+    width: 100%;
+}
+
+.logo-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.car-icon {
+    font-size: 1.8rem;
+}
+
+.profile-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* EDIT FORM */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.input-field {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.input-field::placeholder {
+    color: #a0a0a0;
+}
+
+.input-field:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* CAPACITY BUTTONS - MEJORADO CON ESTILOS DE REGISTER-VEHICLE */
+.capacity-buttons-small {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+}
+
+.capacity-btn-edit {
+    flex: 1;
+    padding: 18px 12px;
+    background-color: #ffffff;
+    color: #666;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.capacity-btn-edit:hover {
+    background-color: #f5f5f5;
+    border-color: #666;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.capacity-btn-edit.active {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.capacity-btn-edit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* SOAT TOGGLE */
+.soat-toggle {
+    display: flex;
+    gap: 12px;
+}
+
+.soat-btn {
+    padding: 10px 35px;
+    background-color: #ffffff;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.soat-btn:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+}
+
+.soat-btn.active {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+/* FILE INPUTS */
+.file-input {
+    display: none;
+}
+
+.file-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 16px;
+    background-color: #ffffff;
+    border: 2px dashed #bbb;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    min-height: 50px;
+}
+
+.file-name::before {
+    content: "📁 ";
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.file-name:hover {
+    background-color: #f8f8f8;
+    border-color: #000000;
+    color: #000000;
+}
+
+.file-name.has-file {
+    background-color: #e8e8e8;
+    border-style: solid;
+    border-color: #000000;
+    color: #000000;
+    font-weight: 600;
+}
+
+.file-name.has-file::before {
+    content: "✓ ";
+    color: #000000;
+    font-size: 1rem;
+}
+
+/* ACTION BUTTONS */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn-danger {
+    flex: 1;
+    padding: 14px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #cc0000;
+}
+
+.btn-danger:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+/* SUCCESS/ERROR MESSAGES */
+.success-box {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 6px;
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 600;
+    animation: slideDown 0.3s ease;
+}
+
+.error-box {
+    background-color: #ff3b3b;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+
+    .profile-card {
+        padding: 20px 30px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-danger {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-bar {
+        padding: 15px 20px;
+    }
+
+    .profile-card {
+        padding: 15px 20px;
+    }
+
+    .profile-title {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .capacity-buttons-small {
+        gap: 8px;
+    }
+
+    .capacity-btn-edit {
+        padding: 14px 8px;
+        font-size: 1.1rem;
+    }
+}
